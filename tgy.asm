@@ -2,19 +2,19 @@
 ;
 ;Die Benutzung der Software ist mit folgenden Bedingungen verbunden:
 ;
-;1. Da ich alles kostenlos zur Verfügung stelle, gebe ich keinerlei Garantie
-;   und übernehme auch keinerlei Haftung für die Folgen der Benutzung.
+;1. Da ich alles kostenlos zur Verfï¿½gung stelle, gebe ich keinerlei Garantie
+;   und ï¿½bernehme auch keinerlei Haftung fï¿½r die Folgen der Benutzung.
 ;
-;2. Die Software ist ausschließlich zur privaten Nutzung bestimmt. Ich
-;   habe nicht geprüft, ob bei gewerblicher Nutzung irgendwelche Patentrechte
-;   verletzt werden oder sonstige rechtliche Einschränkungen vorliegen.
+;2. Die Software ist ausschlieï¿½lich zur privaten Nutzung bestimmt. Ich
+;   habe nicht geprï¿½ft, ob bei gewerblicher Nutzung irgendwelche Patentrechte
+;   verletzt werden oder sonstige rechtliche Einschrï¿½nkungen vorliegen.
 ;
-;3. Jeder darf Änderungen vornehmen, z.B. um die Funktion seinen Bedürfnissen
-;   anzupassen oder zu erweitern. Ich würde mich freuen, wenn ich weiterhin als
+;3. Jeder darf ï¿½nderungen vornehmen, z.B. um die Funktion seinen Bedï¿½rfnissen
+;   anzupassen oder zu erweitern. Ich wï¿½rde mich freuen, wenn ich weiterhin als
 ;   Co-Autor in den Unterlagen erscheine und mir ein Link zur entprechenden Seite
 ;   (falls vorhanden) mitgeteilt wird.
 ;
-;4. Auch nach den Änderungen sollen die Software weiterhin frei sein, d.h. kostenlos bleiben.
+;4. Auch nach den ï¿½nderungen sollen die Software weiterhin frei sein, d.h. kostenlos bleiben.
 ;
 ;!! Wer mit den Nutzungbedingungen nicht einverstanden ist, darf die Software nicht nutzen !!
 ;
@@ -155,7 +155,8 @@
 #elif defined(tgy_esc)
 #include "tgy.inc"		; TowerPro/Turnigy Basic/Plush "type 2" (INT0 PWM)
 #else
-#error "Unrecognized board type."
+;	#error "Unrecognized board type."
+#include "tgy.inc"
 #endif
 
 .equ	CPU_MHZ		= F_CPU / 1000000
@@ -1537,7 +1538,7 @@ t1oca_int1:	sts	ocr1ax, i_temp1
 		out	SREG, i_sreg
 		reti
 ;-----bko-----------------------------------------------------------------
-; timer1 overflow interrupt (happens every 4096µs)
+; timer1 overflow interrupt (happens every 4096ï¿½s)
 t1ovfl_int:	in	i_sreg, SREG
 		lds	i_temp1, tcnt1x
 		inc	i_temp1
@@ -1765,7 +1766,7 @@ urxc_exit:	out	SREG, i_sreg
 		reti
 	.endif
 ;-----bko-----------------------------------------------------------------
-; beeper: timer0 is set to 1µs/count
+; beeper: timer0 is set to 1ï¿½s/count
 beep_f1:	ldi	temp2, 80
 		ldi	temp4, 200
 		RED_on
@@ -1820,7 +1821,7 @@ beep_f4_on:	CpFET_on
 ; must be muted first
 beep:		out	TCNT0, ZH
 beep1:		in	temp1, TCNT0
-		cpi	temp1, 2*CPU_MHZ	; 32µs on
+		cpi	temp1, 2*CPU_MHZ	; 32ï¿½s on
 		brlo	beep1
 		all_pFETs_off temp3
 		all_nFETs_off temp3
@@ -1893,8 +1894,8 @@ eeprom_read_block:				; When interrupts disabled
 eeprom_write_block:				; When interrupts enabled
 		lds	temp1, orig_osccal
 		out	OSCCAL, temp1
-		cbr	flags0, (1<<EEPROM_WRITE)
-		ldi2	YL, YH, eeprom_sig_l
+		cbr	flags0, (1<<EEPROM_WRITE)	; reg16 - bit5
+		ldi2	YL, YH, eeprom_sig_l	; Set Y start address of EEPROM block in SRAM
 		ldi2	temp1, temp2, EEPROM_OFFSET
 eeprom_rw1:	wdr
 		sbic	EECR, EEWE
@@ -1903,13 +1904,13 @@ eeprom_rw1:	wdr
 		sbrc	temp3, SPMEN
 		rjmp	eeprom_rw1		; Loop while flashing
 		cpi	YL, low(eeprom_end)
-		breq	eeprom_rw4
-		out	EEARH, temp2
+		breq	eeprom_rw4		; If Y reach end of EEPROM block in SRAM, exit
+		out	EEARH, temp2		; Read EEPROM at EEPROM_OFFSET
 		out	EEARL, temp1
-		adiw	temp1, 1
+		adiw	temp1, 1	; Increase next EEPROM location
 		sbi	EECR, EERE		; Read existing EEPROM byte
 		in	temp3, EEDR
-		brie	eeprom_rw2
+		brie	eeprom_rw2	; If global interrupt is enabled
 		st	Y+, temp3		; Store the byte to RAM
 		rjmp	eeprom_rw1
 eeprom_rw2:	ld	temp4, Y+		; Compare with the byte in RAM
@@ -3246,12 +3247,12 @@ clear_loop1:	cp	ZL, r0
 		out	MCUCSR, ZH
 
 	; Initialize ports
-		outi	PORTB, INIT_PB, temp1
-		outi	DDRB, DIR_PB | (MOTOR_DEBUG<<3) | (MOTOR_DEBUG<<4) | (MOTOR_DEBUG<<5), temp1
+		outi	PORTB, INIT_PB, temp1	; clear PORTB
+		outi	DDRB, DIR_PB | (MOTOR_DEBUG<<3) | (MOTOR_DEBUG<<4) | (MOTOR_DEBUG<<5), temp1	; Output nFET A,B,C at pin 2,1,0
 		outi	PORTC, INIT_PC, temp1
-		outi	DDRC, DIR_PC, temp1
+		outi	DDRC, DIR_PC, temp1		; 8 pins input
 		outi	PORTD, INIT_PD, temp1
-		outi	DDRD, DIR_PD, temp1
+		outi	DDRD, DIR_PD, temp1		; Output pFET A,B,C at pin 5,4,3
 
 	; For PWM-enable drivers, set enable after initializing ports
 		.if defined(ENABLE_ALL_PORT)
@@ -3272,9 +3273,9 @@ clear_loop1:	cp	ZL, r0
 		.endif
 
 	; Start timers except output PWM
-		outi	TCCR0, T0CLK, temp1	; timer0: beep control, delays
-		outi	TCCR1B, T1CLK, temp1	; timer1: commutation timing, RC pulse measurement
-		out	TCCR2, ZH		; timer2: PWM, stopped
+		outi	TCCR0, T0CLK, temp1	; timer0: beep control, delays;		Timer0: Normal mode, int cl
+		outi	TCCR1B, T1CLK, temp1	; timer1: commutation timing, RC pulse measurement;		Timer1: Normal mode, int clk, no prescale,	ICN & ICE if use_fuse
+		out	TCCR2, ZH		; timer2: PWM, stopped;		Timer2: no clk source
 
 	; Enable watchdog (WDTON may be set or unset)
 		ldi	temp1, (1<<WDCE)+(1<<WDE)

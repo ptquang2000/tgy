@@ -1,2 +1,6 @@
 *.hex
 *.obj
+
+Debug
+ef.asmproj
+ef.componentinfo.xml

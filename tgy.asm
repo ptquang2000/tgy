@@ -3273,9 +3273,9 @@ clear_loop1:	cp	ZL, r0
 		.endif
 
 	; Start timers except output PWM
-		outi	TCCR0, T0CLK, temp1	; timer0: beep control, delays;		Timer0: Normal mode, int cl
-		outi	TCCR1B, T1CLK, temp1	; timer1: commutation timing, RC pulse measurement;		Timer1: Normal mode, int clk, no prescale,	ICN & ICE if use_fuse
-		out	TCCR2, ZH		; timer2: PWM, stopped;		Timer2: no clk source
+		outi	TCCR0, T0CLK, temp1	; timer0: beep control, delays
+		outi	TCCR1B, T1CLK, temp1	; timer1: commutation timing, RC pulse measurement
+		out	TCCR2, ZH		; timer2: PWM, stopped
 
 	; Enable watchdog (WDTON may be set or unset)
 		ldi	temp1, (1<<WDCE)+(1<<WDE)

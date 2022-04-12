@@ -130,11 +130,11 @@ rc_timeout != 0</panel_attributes>
     <coordinates>
       <x>640</x>
       <y>530</y>
-      <w>130</w>
+      <w>30</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-rc_timeout == 0</panel_attributes>
+</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>

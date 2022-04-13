@@ -134,7 +134,7 @@ falling edge</panel_attributes>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-rcp_in == 1</panel_attributes>
+rcp_in == 0</panel_attributes>
     <additional_attributes>160.0;70.0;160.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>

@@ -156,7 +156,10 @@
 #include "tgy.inc"		; TowerPro/Turnigy Basic/Plush "type 2" (INT0 PWM)
 #else
 ;	#error "Unrecognized board type."
+#message "Simulation Mode"
+#define SIMULATION
 #include "tgy.inc"
+
 #endif
 
 .equ	CPU_MHZ		= F_CPU / 1000000
@@ -1819,6 +1822,7 @@ beep_f4_on:	CpFET_on
 ;-----bko-----------------------------------------------------------------
 ; Interrupts no longer need to be disabled to beep, but the PWM interrupt
 ; must be muted first
+#ifndef SIMULATION
 beep:		out	TCNT0, ZH
 beep1:		in	temp1, TCNT0
 		cpi	temp1, 2*CPU_MHZ	; 32�s on
@@ -1853,6 +1857,20 @@ wait3:		in	temp1, TIFR
 		dec	temp2
 		brne	wait1
 wait_ret:	ret
+#else
+beep:	all_pFETs_off temp3
+		all_nFETs_off temp3
+		wdr
+		ret
+
+wait240ms:	rcall	wait120ms
+wait120ms:	rcall	wait60ms
+wait60ms:	rcall	wait30ms
+wait30ms:	
+wait1:		
+wait2:	wdr
+wait_ret:	ret
+#endif
 
 ;-- EEPROM functions -----------------------------------------------------
 ; Interrupts must be disabled to avoid Z conflicts and content changes.

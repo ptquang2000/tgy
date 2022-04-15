@@ -47,18 +47,6 @@ RCP_ALIAS==1</panel_attributes>
     <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>390</x>
-      <y>160</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>neutral
-= puls_low / 8</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>630</x>
@@ -69,18 +57,6 @@ RCP_ALIAS==1</panel_attributes>
     <panel_attributes>lt=&lt;-
 RCP_ALIAS==0</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLState</id>
-    <coordinates>
-      <x>590</x>
-      <y>270</y>
-      <w>100</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>neutral
-= puls_low</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
@@ -135,6 +111,30 @@ RCP_ALIAS==0</panel_attributes>
       <h>20</h>
     </coordinates>
     <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>390</x>
+      <y>160</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>neutral
+= puls_low / 8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>590</x>
+      <y>270</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>neutral
+= puls_low</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

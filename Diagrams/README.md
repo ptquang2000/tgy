@@ -24,3 +24,19 @@
 | Timer0 |                          |
 | Timer1 | Enable + Compare match A |
 | Timer2 | Enable                   |
+
+## Switch power off
+
+|||
+| --     | -- |
+| Timer2 | Normal mode, no clk source, TOV2=0, interrupt = wdr |
+
+## Variable
+
+| Name  ||
+| ---   | --- |
+| rx    | 768 x 16 = 12288 = MIN_RC_PULS x CPU_MHZ < PWM duty cycle < MAX_RC_PULS x CPU_MHZ = 2400 x 16 = 38400 |
+| puls_high | (rx1+rx2+...+rx31) x 256 / 256 |
+| puls_low | (rx1+rx2+...+rx34) x 256 / 256 |
+| puls_high | puls_high >= PROGRAM_RC_PULS x CPU_MHZ = 1460 x 16 = 23360 |
+| rc_duty   | rx x fwd_scale + MIN_DUTY |

@@ -130,20 +130,23 @@ t1oca_int, t2ovfl_int</panel_attributes>
     <id>UMLState</id>
     <coordinates>
       <x>340</x>
-      <y>330</y>
-      <w>120</w>
-      <h>40</h>
+      <y>320</y>
+      <w>140</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>EVAL_RC=0
-type=sender</panel_attributes>
+I2C_MODE=0
+UART_MODE=0
+type=sender
+halign=left</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>470</x>
+      <x>490</x>
       <y>420</y>
-      <w>130</w>
+      <w>110</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>rct_beacon
@@ -162,7 +165,8 @@ type=receiver</panel_attributes>
     <panel_attributes>rc_timeout=0
 rct_boot=0
 rct_beacon=0
-type=sender</panel_attributes>
+type=sender
+halign=left</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -216,14 +220,15 @@ type=sender</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>430</x>
+      <x>440</x>
       <y>620</y>
-      <w>110</w>
+      <w>100</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>rct_beacon
 =60
-type=sender</panel_attributes>
+type=sender
+halign=left</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -231,12 +236,13 @@ type=sender</panel_attributes>
     <coordinates>
       <x>540</x>
       <y>620</y>
-      <w>110</w>
+      <w>100</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>rct_beacon
 =120
-type=receiver</panel_attributes>
+type=receiver
+halign=right</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -285,7 +291,7 @@ type=receiver</panel_attributes>
     </coordinates>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
-    <additional_attributes>170.0;230.0;170.0;270.0;10.0;270.0;10.0;10.0;50.0;10.0</additional_attributes>
+    <additional_attributes>170.0;230.0;170.0;270.0;10.0;270.0;10.0;10.0;60.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLState</id>
@@ -313,10 +319,10 @@ type=receiver</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>470</x>
-      <y>330</y>
-      <w>130</w>
-      <h>40</h>
+      <x>490</x>
+      <y>320</y>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>EVAL_RC=1
 type=receiver</panel_attributes>
@@ -362,11 +368,11 @@ type=receiver</panel_attributes>
       <x>400</x>
       <y>240</y>
       <w>310</w>
-      <h>110</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 rc_duty == 0</panel_attributes>
-    <additional_attributes>290.0;20.0;10.0;20.0;10.0;90.0</additional_attributes>
+    <additional_attributes>290.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -409,11 +415,11 @@ rc_duty != 0</panel_attributes>
       <x>360</x>
       <y>150</y>
       <w>350</w>
-      <h>200</h>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-r2=rc_timeout&lt;10</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;20.0;330.0;20.0</additional_attributes>
+r2=rc_timeout &lt; 10</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;20.0;330.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -424,7 +430,7 @@ r2=rc_timeout&lt;10</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-rc&gt;=10</panel_attributes>
+rc_timeout &gt;= 10</panel_attributes>
     <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -541,9 +547,9 @@ UART_MODE==0</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-I2C_MODE==0 
+I2C_MODE==1
 or
-UART_MODE==0</panel_attributes>
+UART_MODE==1</panel_attributes>
     <additional_attributes>160.0;80.0;160.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
@@ -568,5 +574,28 @@ UART_MODE==0</panel_attributes>
     <panel_attributes>lt=-&gt;
 </panel_attributes>
     <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>870</x>
+      <y>600</y>
+      <w>20</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>540</y>
+      <w>30</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
 </diagram>

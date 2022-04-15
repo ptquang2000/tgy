@@ -1,0 +1,17 @@
+// In normal RC PWM there are 50 updates sent per second (f=50Hz, T=20ms).
+// CPU_MHZ : 16MHz => T = 62.5ns.
+// Pulse width : 20ms (20ms / 62.5ns = 320000 cycles).
+// Max throttle : 2200us (2200us / 62.5ns = 35200 cycles). 
+// Min throttle : 800us (800 = 12800 cycles). 
+$repeat
+PORTD |= 0x02 // SET INT0 HIGH
+#35200
+PORTD &= 0xFB // SET INT0 LOW
+#284800
+$endrep
+$repeat
+PORTD |= 0x02 // SET INT0 HIGH
+#12800
+PORTD &= 0xFB // SET INT0 LOW
+#307200
+$endrep

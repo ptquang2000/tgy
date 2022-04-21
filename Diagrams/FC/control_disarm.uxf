@@ -372,7 +372,7 @@ rc_duty == 0</panel_attributes>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-true</panel_attributes>
+false</panel_attributes>
     <additional_attributes>240.0;20.0;10.0;20.0;10.0;80.0</additional_attributes>
   </element>
   <element>
@@ -392,11 +392,11 @@ true</panel_attributes>
     <coordinates>
       <x>710</x>
       <y>140</y>
-      <w>60</w>
+      <w>50</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-false</panel_attributes>
+true</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>

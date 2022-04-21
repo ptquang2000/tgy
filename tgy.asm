@@ -1541,7 +1541,7 @@ t1oca_int1:	sts	ocr1ax, i_temp1
 		out	SREG, i_sreg
 		reti
 ;-----bko-----------------------------------------------------------------
-; timer1 overflow interrupt (happens every 4096�s)
+; timer1 overflow interrupt (happens every 4096us)
 t1ovfl_int:	in	i_sreg, SREG
 		lds	i_temp1, tcnt1x
 		inc	i_temp1
@@ -1769,7 +1769,7 @@ urxc_exit:	out	SREG, i_sreg
 		reti
 	.endif
 ;-----bko-----------------------------------------------------------------
-; beeper: timer0 is set to 1�s/count
+; beeper: timer0 is set to 1us/count
 beep_f1:	ldi	temp2, 80
 		ldi	temp4, 200
 		RED_on

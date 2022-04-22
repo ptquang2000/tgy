@@ -39,4 +39,5 @@
 | puls_high | (rx1+rx2+...+rx31) x 256 / 256 |
 | puls_low | (rx1+rx2+...+rx34) x 256 / 256 |
 | puls_high | puls_high >= PROGRAM_RC_PULS x CPU_MHZ = 1460 x 16 = 23360 |
+| neutral | neutral = puls or neutral = puls_low / 8
 | rc_duty   | rx x fwd_scale + MIN_DUTY |

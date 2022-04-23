@@ -547,9 +547,9 @@ true</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>1090</x>
+      <x>1080</x>
       <y>750</y>
-      <w>120</w>
+      <w>140</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>wait_commutation</panel_attributes>
@@ -878,11 +878,11 @@ powerskip = 1</panel_attributes>
     <coordinates>
       <x>840</x>
       <y>760</y>
-      <w>270</w>
+      <w>260</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>250.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

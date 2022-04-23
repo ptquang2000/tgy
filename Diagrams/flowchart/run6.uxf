@@ -418,9 +418,9 @@ false</panel_attributes>
   <element>
     <id>UMLObject</id>
     <coordinates>
-      <x>140</x>
+      <x>130</x>
       <y>480</y>
-      <w>310</w>
+      <w>330</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>goodies++

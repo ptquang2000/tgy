@@ -21,7 +21,7 @@
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-RCP_ALIAS[0]</panel_attributes>
+RCP_ALIAS</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -45,7 +45,7 @@ rx[15:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVAL_RC[0]</panel_attributes>
+EVAL_RC</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -69,7 +69,7 @@ rc_timeout[7:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-REVERSE[0]</panel_attributes>
+REVERSE</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -81,7 +81,7 @@ REVERSE[0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-RCP_ERROR[0]</panel_attributes>
+RCP_ERROR</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -129,7 +129,7 @@ rc_duty[15:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-SET_DUTY[0]</panel_attributes>
+SET_DUTY</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -177,7 +177,7 @@ pwm_on_ptr[7:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-FULL_POWER[0]</panel_attributes>
+FULL_POWER</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -189,7 +189,7 @@ FULL_POWER[0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-POWER_ON[0]</panel_attributes>
+POWER_ON</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -225,7 +225,7 @@ sys_control[15:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-OCT1_PENDING[0]</panel_attributes>
+OCT1_PENDING</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>

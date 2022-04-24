@@ -5,9 +5,9 @@
     <id>UMLState</id>
     <coordinates>
       <x>650</x>
-      <y>280</y>
+      <y>270</y>
       <w>160</w>
-      <h>310</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>wait_for_edge</panel_attributes>
     <additional_attributes/>
@@ -16,7 +16,7 @@
     <id>Relation</id>
     <coordinates>
       <x>800</x>
-      <y>310</y>
+      <y>290</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -28,7 +28,7 @@ ZL[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>280</y>
+      <y>270</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -40,7 +40,7 @@ powerskip[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>310</y>
+      <y>290</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -52,19 +52,19 @@ ZL[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>340</y>
+      <y>310</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-STARTUP[0]</panel_attributes>
+STARTUP</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>370</y>
+      <y>330</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -76,12 +76,60 @@ goodies[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>400</y>
+      <y>350</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 start_delay[7:0]</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>370</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+EVAL_RC</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>390</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+OCT1_PENDING</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>410</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+ACO_EDGE_HIGH</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>270</y>
+      <w>210</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+powerskip[7:0]</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -93,62 +141,14 @@ start_delay[7:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVAL_RC[0]</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>460</y>
-      <w>210</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-OCT1_PENDING[0]</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>490</y>
-      <w>210</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-ACO_EDGE_HIGH[0]</panel_attributes>
+ACO</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>800</x>
-      <y>280</y>
-      <w>210</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-powerskip[7:0]</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>460</x>
-      <y>520</y>
-      <w>210</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-ACO[0]</panel_attributes>
-    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>800</x>
-      <y>370</y>
+      <y>330</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -160,7 +160,7 @@ goodies[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>800</x>
-      <y>400</y>
+      <y>350</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
@@ -172,19 +172,19 @@ start_delay[7:0]</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>800</x>
-      <y>340</y>
+      <y>310</y>
       <w>210</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-STARTUP[0]</panel_attributes>
+STARTUP</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>550</y>
+      <y>450</y>
       <w>210</w>
       <h>40</h>
     </coordinates>

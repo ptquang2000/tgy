@@ -21,7 +21,7 @@
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-OCT1_PENDING[0]</panel_attributes>
+OCT1_PENDING</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -33,7 +33,7 @@ OCT1_PENDING[0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-STARTUP[0]</panel_attributes>
+STARTUP</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -57,7 +57,7 @@ powerskip[7:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-EVAL_RC[0]</panel_attributes>
+EVAL_RC</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -165,7 +165,7 @@ tcnt1[23:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-TIMING_FAST[0]</panel_attributes>
+TIMING_FAST</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -237,7 +237,7 @@ off_duty[15:0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-FULL_POWER[0]</panel_attributes>
+FULL_POWER</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
   <element>
@@ -249,7 +249,7 @@ FULL_POWER[0]</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-POWER_ON[0]</panel_attributes>
+POWER_ON</panel_attributes>
     <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
   </element>
 </diagram>
